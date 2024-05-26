@@ -6,7 +6,7 @@ const fs = require('fs');
 console.log('inicio');
 
 //nesse metodo do fs, você passa o nome do arquivo que vai criar e o texto que vai colocar dentro dele
-fs.writeFile('texto.txt', 'Colocando texto', function (err) {
+fs.writeFile('texto.txt', 'Escrevendo pela função assincrona', function (err) {
     //função que vai fazer apoós criar o arquivo
     setTimeout(function () {
         console.log('Arquivo criado!');
