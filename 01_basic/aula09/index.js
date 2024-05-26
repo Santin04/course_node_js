@@ -20,4 +20,4 @@ console.log('oi, %s, tchau', y);
 //desse jeito o %s, indica que ali vai ter uma variavel tipo string, e é só passar a variavel depois da virgula
 
 //limpa o console
-console.clear()
+console.clear();
