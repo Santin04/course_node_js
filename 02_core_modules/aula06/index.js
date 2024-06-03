@@ -19,7 +19,7 @@ const server = http.createServer((req, res) => {
         //lendo o arquivo html para rodar na tela do navegador
         fs.readFile('index.html', function(err, data) {
             //fazendo com que aceite textos html
-            res.writeHead(200, {'Content_Type': 'text/html'});
+            res.writeHead(200, {'Content-Type': 'text/html'});
             //enviando o texto html para o servidor
             res.write(data);
             //finalizando os envios de respostas para o usuário
@@ -27,11 +27,13 @@ const server = http.createServer((req, res) => {
         })
     //Mas caso ache a chave key com o valor dela no url, exibir esse bloco de comando
     } else {
-        //passando o código de redirecionar e mandando atraves do location para onde vai mandar o usuário
-        //nesse caso está mandando para a mesma tela normal
-        res.writeHead(302, {location: '/'});
-        //finalizando os envios de respostas para o usuário
-        return res.end();
+        //escrevendo no arquivo.txt (se ele não existir, ele é criado), vamos escreu oque tem na variavel name e após escrever vai ocorrer a função
+        fs.writeFile('arquivo.txt', name, function (err, data) {
+            //passando o código de redirecionar e mandando atraves do location para onde vai mandar o usuário   
+            res.writeHead(302, {location: '/'});
+            //finalizando os envios de respostas para o usuário
+            return res.end();
+        })
     }
 })
 
