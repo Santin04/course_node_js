@@ -1,0 +1,22 @@
+Para começar um projeto usando o npm, basta você abrir um terminal aonde vai começar o projeto e dar o seguinte comando:
+npm init
+
+Em sequência, ele vai fazer diversas perguntas para poder criar o arquivo package.json, que é oque vai configurar seu projeto
+Aparece para você preencher as seguinte coisas:
+    1° Nome do seu projeto
+    2° A versão do npm que deseja
+    3° Descrição do projeto
+    4° Nome do arquivo principal/arquivo inicial da aplicação
+    5° Comando de teste (Ex: Npm run dev, nodemon index.js, Node index.js)
+    6° O repositório de git do projeto
+    7° Palavra chave
+    8° Tipo de licença do seu projeto
+
+Depois disso ele carrega e retorna um objeto mostrando todas configurações do seu projeto e pede para você confirmar se está ok
+
+OBS: você pode simplesmente dar enter em tudo e deixar oque o npm sugere, pois ao longo do projeto você pode ir configurando como desejar
+COMANDO: npm init -y
+    Com esse comando ele gera o package.json com os valores padrão de uma forma mais rápida, não precisando dar enter várias vezes
+
+COMANDO: npm --version
+    Com esse comando no terminal ele te retorna qual é a versão do npm que você está usando no seu projeto
