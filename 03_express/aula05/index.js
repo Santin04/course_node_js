@@ -1,6 +1,4 @@
 //nesse aqui vamos aprender a usar o router, para facilitar o uso das rotas e deixar o código mais organizado
-//nessa aula aqui também vou aproveitar e colocar uma linha de código que deixa os arquivos statics acessíveis (css, js
-//arquivos html também são statics, porém é recomendado deixar eles em uma pasta fora do public, pois assim você tem um controle melhor de quem pode acessaar
 //no fim do código também tem ensinando como fazer aparecer o erro 404, caso tentem acessar um rota que não existe
 const express = require('express');
 const app = express();
