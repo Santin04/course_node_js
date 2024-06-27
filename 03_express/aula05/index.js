@@ -1,6 +1,7 @@
 //nesse aqui vamos aprender a usar o router, para facilitar o uso das rotas e deixar o código mais organizado
 //nessa aula aqui também vou aproveitar e colocar uma linha de código que deixa os arquivos statics acessíveis (css, js
 //arquivos html também são statics, porém é recomendado deixar eles em uma pasta fora do public, pois assim você tem um controle melhor de quem pode acessaar
+//no fim do código também tem ensinando como fazer aparecer o erro 404, caso tentem acessar um rota que não existe
 const express = require('express');
 const app = express();
 const port = 3000;
@@ -30,6 +31,11 @@ app.get('/', (req, res) => {
 //para mostrar o exemplo eu peguei o arquivo index.js da aula anterior
 //em seguida vou tirar todos as rotas que tem o users e enviar para outro arquivo index.js que vai estar dentro da pasta users
 //todos os get e post que estavam aqui com a rota do users, já estão no outro arquivo
+
+//essa parte aqui é para fazer quando o usuáro acessar um rota que não existe, ele vai parar no html do erro 404
+app.use(function(rew, res, next){
+    res.status(404).sendFile(`${basepath}/404.html`);
+});
 
 app.listen(port, () => {
     console.log('Servidor está rodando normalmente');
