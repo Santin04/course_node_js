@@ -1,0 +1,13 @@
+<h1>Olá handlebars!</h1>
+<p>Meu nome é {{user.name}} {{user.surname}}</p>
+<p>a palavra secreta é: {{palavra}}</p>
+{{!-- abaixo está um exemplo de um estrutura de condição aqui no handlebars --}}
+{{!-- o texto que está dentro do if, só vai ser exibido se o if for true --}}
+{{#if auth}}
+    <p>Parabéns, você está autenticado, seu login foi bem sucedido</p>
+    {{!-- enviando o usuário para outro handlebars caso clique no link --}}
+    <p>para prosseguir, <a href="./dashboard">clique aqui</a></p>
+{{!-- esse aqui abaixo é um exemplo do else, você abre ele no meio da abertura e do fechamento do if --}}
+{{else}}
+    <p>Erro, o seu login não foi encontrado, tentar novamente</p>
+{{/if}}
