@@ -11,3 +11,14 @@
 {{else}}
     <p>Erro, o seu login não foi encontrado, tentar novamente</p>
 {{/if}}
+<br>
+<br>
+<br>
+<br>
+{{!-- Aqui abaixo vou deixar um exemplo de como usar o with, ele serve para você não ficar repetindo a mesma coisa toda hora --}}
+{{!-- no exemplo que vou usar, vai ser com o objeto users, assim não vou ficar precisando escrever users toda hora --}}
+<h2>Exemplo de como usar o comando with</h2>
+{{#with user}}
+    <p>Nome: {{name}}</p>
+    <p>Sobrenome: {{surname}}</p>
+{{/with}}

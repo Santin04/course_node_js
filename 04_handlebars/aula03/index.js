@@ -1,3 +1,5 @@
+//nesse aqui vamos mostrar como fazer condicionais com if e else e também como fazer loop com o each
+//o if e else vão estar na página principal '/' e o each vai estar na página 'dashboard'
 const express = require('express');
 const app = express();
 const port = 3000;
@@ -23,9 +25,12 @@ app.get('/', (req, res) => {
 });
 
 app.get('/dashboard', (req, res) => {
+    //crinado uma lista que vamos fazer um loop nela dentro do arquivo
+    const itens = ['item01', 'item02', 'item03'];
+
     //lembrando que não é preciso passar o caminho todo, ele já entende automaticamente que está buscando um arquivo do views
     //e também não precisa passar a extensão, ele já entende automaticamente que é um handlebars
-    res.render('dashboard');
+    res.render('dashboard', {itens: itens});
 });
 
 app.listen(port, () => {

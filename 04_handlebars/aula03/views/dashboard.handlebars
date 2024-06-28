@@ -1,2 +1,10 @@
 <h1>Dashboard</h1>
 <a href="/">voltar</a>
+{{!-- Aqui abaixo vamos ter um exemplo de como usar o loop no handlebars, o loop aqui é chamado de each --}}
+<ul>
+    {{!-- aqui ele chama a função de loop e tudo que está dentro vai se repetir até acabar a quantidade de itens que tem dentro do array --}}
+    {{#each itens}}
+    {{!-- nesse caso aqui ele vai gerar linhas, e como o array tem 3 itens, ele via gerar 3 novas linhas na página html --}}
+    <li>{{this}}</li>
+    {{/each}}
+</ul>
