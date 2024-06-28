@@ -1,0 +1,18 @@
+<h1>Olá handlebars!</h1>
+<p>Meu nome é {{user.name}} {{user.surname}}</p>
+<p>a palavra secreta é: {{palavra}}</p>
+{{#if auth}}
+    <p>Parabéns, você está autenticado, seu login foi bem sucedido</p>
+    <p>para prosseguir, <a href="./dashboard">clique aqui</a></p>
+{{else}}
+    <p>Erro, o seu login não foi encontrado, tentar novamente</p>
+{{/if}}
+<br>
+<br>
+<br>
+<br>
+<h2>Exemplo de como usar o comando with</h2>
+{{#with user}}
+    <p>Nome: {{name}}</p>
+    <p>Sobrenome: {{surname}}</p>
+{{/with}}

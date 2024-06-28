@@ -1,0 +1,13 @@
+{{!-- usando o loop para assim passar usando o partials por todos os blogs, assim todos os blogs tendo a mesma estrutura --}}
+<h1>Nossos Blogs</h1>
+{{#each all_blogs}}
+    {{!-- para usar o partials basta você colocar entro dois pares de chaves o sinal do maior (>) que ele indica que vai usar um partials --}}
+    {{!-- e em seguida passar o nome do arquivo partials que você deseja usar, como usamos o array de objeto, ele vai percorrer por todos os objetos --}}
+    {{!-- e dentro do arquivo blogs do partials ele vai ter acesso aos this, por conta que passamos o objeto quando chamamos o loop --}}
+    {{> blogs}}
+{{/each}}
+
+{{!-- caso você queira usar o partials, sem ter um array de objeto, tendo somente um objeto, ou seja, você não vai precisar do each --}}
+{{!-- você tem que usar ele da seguinte forma: --}}
+{{!-- {{> blogs all_blogs}} --}}
+{{!-- ou seja, dentro de duas chaves você vai passar o sinal de maior (>) depois dele vai falar qual partial deseja usar e depois passar a variavel --}}
