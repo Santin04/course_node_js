@@ -24,8 +24,8 @@ app.get('/', (req, res) => {
 const conn = mysql.createConnection({
     host: 'localhost',
     user: 'root',
-    database: 'Santin04DEV',
-    password: 'nodemysql2'
+    database: 'nodemysql2',
+    password: 'Santin04DEV'
 });
 
 //chamando a função que conecta com o banco de dados
