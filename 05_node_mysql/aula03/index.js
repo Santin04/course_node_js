@@ -53,7 +53,16 @@ app.post('/books/insertbook', (req, res) => {
 app.get('/books', (req, res) => {
     //fazer a query que vai selecionar todos as linhas da tabela books
     //straduzindo: selecionar todos elemento de books
+    //assim seleciona todos os itens da tabela, mas se for para selecionar somente um, basta usar um where id`${id}`
     const sql = 'SELECT * FROM books';
+
+    //para fazer uma página que edita os dados, basta criar outro formulário com um action e method post, e a query seria mais ou menos assim
+    //sql = `UPDATE books SET title = '${title}', pageqty = '${pageqty}' WHERE id = ${id}`
+    //assim você edita uma linha da tabela, o where no fim serve para identificar qual linha você está editando
+
+    //já para excluir basta você criar um form com apenas um botão de submit, esse form ficaria na frente do item que deseja excluir
+    //esse form teria um action que realizaria a exclusão do item, passando o id pela url dinamica e teria o method POST e sua query seria assim
+    //sql = `DELETE FROM books WHERE id = ${id}`
 
     //enviando a query para o banco de dados para ela ser executada
     conn.query(sql, (err, data) => {
