@@ -35,7 +35,7 @@ app.get('/', (req, res) => {
 
 app.post('/books/insertbook', (req, res) => {
     const title = req.params.title;
-    const pageqty = req.param.pageqty;
+    const pageqty = req.params.pageqty;
 
     const sql = `INSERT INTO books (title, pageqty) VALUES ('${title}', '${pageqty}')`;
 
